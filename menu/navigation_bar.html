@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>网站导航栏</title>
+	</head>
+
+	<body>
+		<div>
+			<ul class="layui-nav">
+				<img src="images/logo.png" class="logo_biao_top_2" />
+				<li class="layui-nav-item login_yes">
+					<a href="javascript:;"><img class="user-tx" /><span class="username"></span></a>
+					<dl class="layui-nav-child">
+						<dd>
+							<a href="">关注店铺</a>
+						</dd>
+						<dd>
+							<a href="">收藏商品</a>
+						</dd>
+						<dd>
+							<a href="">退出登录</a>
+						</dd>
+					</dl>
+				</li>
+				<li class="layui-nav-item login_no">
+					<a href="login.html">请登录</a>
+				</li>
+				<li class="layui-nav-item login_no">
+					<a href="register.html">免费注册</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="">商品分类</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="javascript:;">购物车</a>
+					<dl class="layui-nav-child">
+						<dd>
+							<a href="">您还没有商品哦</a>
+						</dd>
+					</dl>
+				</li>
+				<li class="layui-nav-item">
+					<a href="javascript:;">收藏夹</a>
+					<dl class="layui-nav-child">
+						<dd>
+							<a href="">收藏的商品</a>
+						</dd>
+						<dd>
+							<a href="">收藏的店铺</a>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+		<script>
+			layui.use(['element', 'form', 'jquery'], function() {
+				var form = layui.form,
+					element = layui.element,
+					$ = layui.$; //导航的hover效果、二级菜单等功能，需要依赖element模块
+				
+				if(user != null && user != undefined) {
+					$(".login_no").hide();
+					$(".user-tx").attr("src", user.tx);
+					$(".username").html(user.username)
+					
+				} else {
+					$(".login_yes").hide();
+				}
+
+				//监听导航点击
+				element.on('nav(demo)', function(elem) {
+					//console.log(elem)
+					layer.msg(elem.text());
+				});
+			});
+		</script>
+	</body>
+
+</html>

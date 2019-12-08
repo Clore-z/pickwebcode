@@ -1,0 +1,39 @@
+.login-nr{
+	margin:0 auto;
+}
+.login-title{
+	padding-top: 40px;
+	padding-bottom: 10px;
+	width: 295px;
+	font-weight: bold;
+	font-size: 18px;
+}
+.login-xf-biao{
+	display: block;
+	width: 425px;
+	height: 350px;
+	box-shadow:2px 2px 10px #000;
+	background: #fff;
+}
+.layui-btn{
+	display:block;
+}
+.layui-form input{
+	width: 250px;
+}
+a{
+	font-size: 12px;
+}
+.login-qt{
+	text-align: right;
+	margin-right: 65px;
+	margin-top: 20px;
+}
+.login-from{
+	background: url(../images/background-login.jpg);
+	background-size:100% 100%;
+	padding-top: 20px;
+	width: 1200px;
+	margin: 0 auto;
+	height: 650px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="layui-v2.5.5/layui/css/layui.css" media="all">
+		<script src="js/data.js"></script>
+		<script src="js/include.js"></script>
+		<link rel="stylesheet" href="css/register.css" />
+		<link rel="stylesheet" href="css/navigation_bar.css">
+		<link rel="stylesheet" href="css/foot.css">
+		<title>用户注册表单</title>
+	</head>
+
+	<body>
+		<include src="menu/navigation_bar.html"></include>
+		<div class="register-form-pack">
+			<div class="register_title">
+				<img src="images/logo.png" /> 用户注册
+			</div>
+			<hr class="layui-bg-blue">
+			<form class="layui-form" action="">
+				<div class="layui-form-item">
+					<label class="layui-form-label">用户名:</label>
+					<div class="layui-input-inline">
+						<input type="text" name="username" placeholder="请输入用户名！" lay-verify="username" autocomplete="off" class="layui-input" />
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">密码:</label>
+					<div class="layui-input-inline">
+						<input type="password" name="password" placeholder="请输入密码！" autocomplete="off" lay-verify="pass" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">确认密码:</label>
+					<div class="layui-input-inline">
+						<input type="password" name="passwordtrue" placeholder="请重新输入密码！" autocomplete="off" lay-verify="pass|confirmPass" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">昵称:</label>
+					<div class="layui-input-inline">
+						<input type="text" name="nikname" placeholder="请输入昵称！" class="layui-input" lay-verify="required">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">性别：</label>
+					<div class="layui-input-block">
+						<input type="radio" name="sex" value="1" title="男" checked="">
+						<input type="radio" name="sex" value="2" title="女">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label">出生日期：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="birthday" id="date" lay-verify="date" placeholder="年-月-日" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<div class="layui-inline">
+						<label class="layui-form-label">手机号码：</label>
+						<div class="layui-input-inline">
+							<input type="tel" name="Phonenumber" lay-verify="required|phone" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-inline">
+						<label class="layui-form-label">E-mail：</label>
+						<div class="layui-input-inline">
+							<input type="text" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<div class="layui-input-block">
+						<button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+						<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<include src="menu/foot_w.html"></include>
+		<script src="layui-v2.5.5/layui/layui.js" charset="utf-8"></script>
+		<script src="js/register.js" charset="utf-8"></script>
+	</body>
+
+</html>

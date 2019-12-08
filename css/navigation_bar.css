@@ -1,0 +1,19 @@
+.a{
+	font-weight: bold;
+}
+.layui-nav{
+	background-color: #45d0d0;
+	text-align: right;
+}
+.layui-nav-item a{
+	color: #f5fffa !important;
+}
+.logo_biao_top_2{
+	margin-top: 10px;
+	float: left;
+	width: 36px;
+}
+.layui-nav-child a{
+	text-align: center;
+	color: #c68939 !important;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!-- 一个拥有登录主建的表盘页面 -->
+		<title>登录表盘</title>
+	</head>
+	<body>
+		<div class="login-xf-biao login-nr">
+			<div class="login-title login-nr">
+				<img class="logo_biao_top" src="images/logo.png">
+				账号密码登录
+				<hr class="layui-bg-blue">
+			</div>
+			
+			<form class="layui-form login-nr" action="">
+				<div class="layui-form-item">
+					<label class="layui-form-label">
+						<i class="layui-icon layui-icon-username" style="font-size: 30px; color: #1E9FFF;"></i>  
+					</label>
+					<div class="layui-input-block">
+						<input type="text" name="username" lay-verify="required" autocomplete="off" placeholder="请输入用户名" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">
+						<i class="layui-icon layui-icon-password" style="font-size: 30px; color: #1E9FFF;"></i>  
+					</label>
+					<div class="layui-input-block">
+						<input type="password" name="password" lay-verify="required" autocomplete="off" placeholder="请输入密码" class="layui-input">
+					</div>
+				</div>
+				<button type="submit" class="layui-btn layui-btn-normal login-nr" lay-filter="demo1" lay-submit="">登录</button>
+			</form>
+			<div class="login-qt">
+				<a>忘记密码</a> | <a href="register.html">注册登录</a>
+			</div>
+		</div>
+	</body>
+</html>

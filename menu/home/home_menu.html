@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../../layui-v2.5.5/layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="../../css/home/menu.css">
+		<title>首页商品菜单</title>
+	</head>
+
+	<body>
+		<ul class="layui-nav layui-nav-tree layui-inline" lay-filter="demo" style="margin-right: 10px;">
+		</ul>
+		
+		<script src="../../layui-v2.5.5/layui/layui.js" charset="utf-8"></script>
+		<script src="../../js/data.js" charset="utf-8"></script>
+		<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+		<script>
+			layui.use('element', function() {
+				var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+				layui.$.each(home_menu,function(i,n){
+					var show = n.show;
+					layui.$(".layui-nav").append("<li class='layui-nav-item'><a href=''>"+show[0]+"</a><span>/</span><a href=''>"+show[1]+"</a><span>/</span><a href=''>"+show[2]+"</a><div class='clear'></div></li>");
+				});
+				
+				
+				//监听导航点击
+				element.on('nav(demo)', function(elem) {
+					//console.log(elem)
+					layer.msg(elem.text());
+				});
+			});
+		</script>
+	</body>
+
+</html>

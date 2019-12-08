@@ -1,0 +1,41 @@
+span{
+	margin: 0px 5px;
+	color: #996666 !important;	
+	float: left;
+}
+.clear{
+	clear: both;
+}
+.layui-nav{
+	background-color: #fff;
+	border: 1px solid #45d0d0;
+}
+/*li鼠标悬浮颜色*/
+.layui-nav-tree .layui-nav-item a:hover {
+	background-color: #45d0d0;
+	color: #fff !important;
+}
+.layui-nav-item:hover{
+	background-color: #45d0d0;
+	color: #fff !important;
+    -webkit-transition: all .7s; 
+    -moz-transition: all .7s; 
+    -ms-transition: all .7s; 
+    -o-transition: all .7s; 
+    transition: all .7s;
+}
+.layui-nav-item{
+	width: 154px !important;
+	padding: 0px 25px 0px 19px;
+}
+/*鼠标悬浮显示的颜色框*/
+.layui-nav-tree .layui-nav-bar {
+	width: 5px;
+	height: 0;
+	background-color: #666699;
+}
+a{
+	color: #996666 !important;	
+	float: left;
+	padding: 0px !important;
+}
